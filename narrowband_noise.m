@@ -9,6 +9,8 @@ samples = Fs*time
 gaussian = randn(samples,1);
 gaussian = gaussian./(max(abs(gaussian)));
 bandnoise = bandpass(gaussian,[low_cutoff high_cutoff],Fs);
+figure;
+pspectrum(bandnoise,Fs);
 ext = [".wav"]
 names= append('band_noise',num2str(low_cutoff),'_',num2str(high_cutoff),'Hz',ext)
 audiowrite(names,bandnoise,44100)
