@@ -66,7 +66,7 @@ else disp('The number of pure tones for a complex sound in this code is limited 
 end
 
 figure;
-plot(time(1:Fs/100),y(1:Fs/100)); xlabel('Time(s)'); ylabel('Amplitude');
+plot(time(1:fix(Fs/200))*1000,y(1:fix(Fs/200))); 
 
 figure;
 pspectrum(y,Fs);
