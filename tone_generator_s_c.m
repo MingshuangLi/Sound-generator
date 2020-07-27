@@ -69,7 +69,7 @@ figure;
 plot(time(1:fix(Fs/200))*1000,y(1:fix(Fs/200))); 
 
 figure;
-pspectrum(y,Fs);
+pspectrum(y,Fs,'FrequencyLimits',[1 10000]);
 
 names= input('Please type name of new audiofile: ', 's');
 audiowrite(names,y,Fs)
