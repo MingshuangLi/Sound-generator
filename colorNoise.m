@@ -8,7 +8,7 @@ rng default;
 x = cNoise();
 x = x./(max(abs(x)));
 figure;
-pspectrum(x,fs);
+pspectrum(x,fs, 'FrequencyLimits',[1 10000]);
 names= input('Please type name of new audiofile: ', 's');
 audiowrite(names,x,fs)
 
