@@ -1,5 +1,5 @@
 %Mingshuang Li, UT Austin
-fs = 44100;
+fs = input('Please input the sampling frequency (Hz): ')
 duration = input('Please input the duration of pink noise (s): ');
 y = pinknoise(duration*fs);
 figure;
